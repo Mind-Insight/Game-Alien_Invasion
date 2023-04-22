@@ -4,6 +4,7 @@ from pygame.sprite import Sprite
 
 from ship import Ship
 
+
 class Scoreboard():
     """Класс для вывод игровой информации"""
 
@@ -30,7 +31,7 @@ class Scoreboard():
         rounded_score = round(self.stats.score, -1)
         score_str = "{:,}".format(rounded_score)
         self.score_image = self.font.render(score_str, True,
-                    self.text_color, self.settings.bg_color)
+                                            self.text_color, self.settings.bg_color)
 
         # Вывод счета в правой верхней части экрана
         self.score_rect = self.score_image.get_rect()
@@ -42,7 +43,7 @@ class Scoreboard():
         high_score = round(self.stats.high_score, -1)
         high_score_str = "{:,}".format(high_score)
         self.high_score_image = self.font.render(high_score_str, True,
-                        self.text_color, self.settings.bg_color)
+                                                 self.text_color, self.settings.bg_color)
 
         # Рекорд выравнивается по центру верхней стороны
         self.high_score_rect = self.high_score_image.get_rect()
@@ -53,7 +54,7 @@ class Scoreboard():
         """Преобразует уровень в графическое изображение"""
         level_str = str(self.stats.level)
         self.level_image = self.font.render(level_str, True,
-                        self.text_color, self.settings.bg_color)
+                                            self.text_color, self.settings.bg_color)
 
         # Уровень выводится под текущим счетом
         self.level_rect = self.level_image.get_rect()

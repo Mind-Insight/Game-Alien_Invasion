@@ -12,8 +12,9 @@ class Alien(Sprite):
         self.ai_game = ai_game.settings
 
         # Загрузка изображение пришельца и назначение атрибута rect
-        self.image = pygame.image.load("C:\\Users\\nskti\\Desktop\\Project1\\images\\pix_alien2.jpg")
-        self.image = pygame.transform.scale(self.image, (self.ai_game.alien_width, self.ai_game.alien_height))
+        self.image = pygame.image.load("images/pix_alien2.jpg")
+        self.image = pygame.transform.scale(
+            self.image, (self.ai_game.alien_width, self.ai_game.alien_height))
         self.rect = self.image.get_rect()
 
         # Каждый новый пришелец появляется в левом верхнем углу

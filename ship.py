@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Ship(Sprite):
     """Класс для управления кораблем"""
 
@@ -12,10 +13,11 @@ class Ship(Sprite):
 
         # Загружает изображение корабля
 
-        self.image = pygame.image.load("C:\\Users\\nskti\\Desktop\\Project1\\images\\battle_ship.png")
+        self.image = pygame.image.load("images/battle_ship.png")
 
         # устанавливает размер корабля
-        self.image = pygame.transform.scale(self.image, (self.ai_game.ship_width, self.ai_game.ship_height))
+        self.image = pygame.transform.scale(
+            self.image, (self.ai_game.ship_width, self.ai_game.ship_height))
 
         # получает прямоугольник
         self.rect = self.image.get_rect()

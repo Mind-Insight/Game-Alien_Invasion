@@ -181,7 +181,8 @@ class AlienInvasion:
     def _check_bullet_alien_collisions(self):
         """Обработка коллизий снарядов с пришельцами."""
         # Удаление снарядов и пришельцев, участвующих в коллизиях
-        collisions = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
+        collisions = pygame.sprite.groupcollide(
+            self.bullets, self.aliens, True, True)
 
         if collisions:
             for aliens in collisions.values():

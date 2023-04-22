@@ -1,5 +1,6 @@
 class Settings:
     """Класс для хранения всех настроек игры Alien Invasion"""
+
     def __init__(self):
         """Инициализирует статические настройки игры"""
         # Параметры экрана
@@ -22,7 +23,6 @@ class Settings:
         self.alien_width = 65
         self.alien_height = 65
         self.fleet_drop_speed = 15
-
 
         # Темп ускорения игры
         self.speedup_scale = 1.1
